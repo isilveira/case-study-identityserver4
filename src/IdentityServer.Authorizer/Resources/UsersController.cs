@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace IdentityServer.Authorizer.Resources
 {
     [Route("api/v1/[controller]")]
+    [ApiController]
     public class UsersController: ControllerBase
     {
         [HttpGet]

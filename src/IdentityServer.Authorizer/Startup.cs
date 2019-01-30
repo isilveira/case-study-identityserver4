@@ -15,6 +15,11 @@ namespace IdentityServer.Authorizer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentityServer()
+                .AddInMemoryIdentityResources(TempConfiguration.GetIdentityResources())
+                .AddInMemoryApiResources(TempConfiguration.GetApis())
+                .AddInMemoryClients(TempConfiguration.GetClients());
+
             services.AddMvc();
         }
 
@@ -25,6 +30,9 @@ namespace IdentityServer.Authorizer
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseIdentityServer();
+
             app.UseMvc();
         }
     }
