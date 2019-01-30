@@ -53,7 +53,7 @@ namespace IdentityServer.Apis.One
             }
 
             app.UseAuthentication();
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

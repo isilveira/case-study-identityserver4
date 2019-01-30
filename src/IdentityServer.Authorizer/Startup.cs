@@ -16,6 +16,7 @@ namespace IdentityServer.Authorizer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityServer()
+                .AddDeveloperSigningCredential()
                 .AddInMemoryIdentityResources(TempConfiguration.GetIdentityResources())
                 .AddInMemoryApiResources(TempConfiguration.GetApis())
                 .AddInMemoryClients(TempConfiguration.GetClients());
