@@ -1,2 +1,2 @@
-# case-study-identityserver4
-IdetityServer4 - Case study
+# IdentityServer4
+Study case of authentication as a service with Identity Server 4
