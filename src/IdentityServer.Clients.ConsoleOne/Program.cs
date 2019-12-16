@@ -26,8 +26,8 @@ namespace IdentityServer.Clients.ConsoleOne
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "client_app1",
-                ClientSecret = "client_app1_secret",
+                ClientId = "client",
+                ClientSecret = "511536EF-F270-4058-80CA-1C89C192F69A",
                 Scope = "api1"
             }).Result;
 
@@ -43,7 +43,7 @@ namespace IdentityServer.Clients.ConsoleOne
             // call api
             client.SetBearerToken(token.AccessToken);
 
-            var response = client.GetAsync("http://localhost:5100/api/identity").Result;
+            var response = client.GetAsync("http://localhost:59880/api/identity").Result;
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
