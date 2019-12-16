@@ -48,7 +48,7 @@ namespace IdentityServer.IdentitySHIELD
                 {
                     Log.Information("Seeding database...");
                     var config = host.Services.GetRequiredService<IConfiguration>();
-                    var connectionString = config.GetConnectionString("DefaultConnection");
+                    var connectionString = config.GetConnectionString("MSSQLConnection");
                     SeedData.EnsureSeedData(connectionString);
                     Log.Information("Done seeding database.");
                     return 0;
