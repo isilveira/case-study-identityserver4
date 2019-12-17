@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace IdentityServer.IdentitySHIELD.Migrations.ConfigurationDb
+namespace IdentityServer.Authorizer.Migrations.ConfigurationDb
 {
-    public partial class Config : Migration
+    public partial class InitialConfigurationDbMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
             migrationBuilder.CreateTable(
                 name: "ApiResources",
                 columns: table => new

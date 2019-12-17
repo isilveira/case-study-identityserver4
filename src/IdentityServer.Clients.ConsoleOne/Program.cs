@@ -43,7 +43,7 @@ namespace IdentityServer.Clients.ConsoleOne
             // call api
             client.SetBearerToken(token.AccessToken);
 
-            var response = client.GetAsync("http://localhost:59880/api/identity").Result;
+            var response = client.GetAsync("http://localhost:6100/api/identity").Result;
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
