@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityServer.Identity\IdentityServer.Identity.csproj" />
+    <ProjectReference Include="..\..\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj" />
   </ItemGroup>
 
 </Project>

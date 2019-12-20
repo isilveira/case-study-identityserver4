@@ -17,7 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{AC8E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Authorizer", "src\IdentityServer.Authorizer\IdentityServer.Authorizer.csproj", "{6B82DBCF-8A90-4006-A213-4301EDC483CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Identity", "src\IdentityServer.Identity\IdentityServer.Identity.csproj", "{25E489FA-4514-453C-AE2C-D07F69FABDDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Identity", "src\IdentityServer.Identity\IdentityServer.Identity.csproj", "{25E489FA-4514-453C-AE2C-D07F69FABDDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndentityServer.Authorizer.Core", "IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj", "{52BF06DC-CA5E-4285-AB47-0650B2124530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Clients.ConsoleUser", "src\IdentityServer.Clients.ConsoleUser\IdentityServer.Clients.ConsoleUser.csproj", "{53011B0A-67F2-4575-944A-D931A00BFBB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,14 @@ Global
 		{25E489FA-4514-453C-AE2C-D07F69FABDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E489FA-4514-453C-AE2C-D07F69FABDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E489FA-4514-453C-AE2C-D07F69FABDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BF06DC-CA5E-4285-AB47-0650B2124530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BF06DC-CA5E-4285-AB47-0650B2124530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BF06DC-CA5E-4285-AB47-0650B2124530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BF06DC-CA5E-4285-AB47-0650B2124530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +65,8 @@ Global
 		{AC8E4A10-D902-4188-AA38-214A79D12C99} = {1D92C7C8-FB58-4520-8961-F957E1E521D9}
 		{6B82DBCF-8A90-4006-A213-4301EDC483CA} = {AC8E4A10-D902-4188-AA38-214A79D12C99}
 		{25E489FA-4514-453C-AE2C-D07F69FABDDB} = {AC8E4A10-D902-4188-AA38-214A79D12C99}
+		{52BF06DC-CA5E-4285-AB47-0650B2124530} = {AC8E4A10-D902-4188-AA38-214A79D12C99}
+		{53011B0A-67F2-4575-944A-D931A00BFBB5} = {AEAD57B8-79F1-4E2B-9226-2A9763ABC7F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66B8A50E-87A6-4602-B3E8-962840D377B7}

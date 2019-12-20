@@ -30,7 +30,7 @@ namespace IdentityServer.Authorizer
                 // client credentials flow client
                 new Client
                 {
-                    ClientId = "client",
+                    ClientId = "client.console_one",
                     ClientName = "Client Credentials Client",
 
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
@@ -38,7 +38,17 @@ namespace IdentityServer.Authorizer
 
                     AllowedScopes = { "api1" }
                 },
+                new Client
+                {
+                    ClientId = "client.console_user",
+                    ClientName = "User credentials client",
 
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPass
+                    word,
+                    ClientSecrets = { new Secret("4264F8BA-51D0-D271-E49E-E4C2E1B31744".Sha256()) },
+
+                    AllowedScopes = { "api1" }
+                },
                 // MVC client using code flow + pkce
                 new Client
                 {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace IdentityServer.Identity.Data.Migrations
+namespace IdentityServer.Authorizer.Core.Infrastructures.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

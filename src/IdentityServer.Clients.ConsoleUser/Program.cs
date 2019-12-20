@@ -2,9 +2,8 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Net.Http;
-using System.Threading.Tasks;
 
-namespace IdentityServer.Clients.ConsoleOne
+namespace IdentityServer.Clients.ConsoleUser
 {
     class Program
     {
@@ -21,14 +20,18 @@ namespace IdentityServer.Clients.ConsoleOne
                 Console.ReadLine();
                 return;
             }
-
-            var token = client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            string userName = "italobrian@gmail.com";
+            string userPassword = "_Brian1989";
+            Console.WriteLine($"User: {userName}");
+            var token = client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "client.console_one",
-                ClientSecret = "511536EF-F270-4058-80CA-1C89C192F69A",
-                Scope = "api1"
+                ClientId = "client.console_user",
+                ClientSecret = "4264F8BA-51D0-D271-E49E-E4C2E1B31744",
+                Scope = "api1",
+                UserName = userName,
+                Password = userPassword
             }).Result;
 
             if (token.IsError)
