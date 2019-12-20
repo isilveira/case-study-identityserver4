@@ -20,9 +20,13 @@ namespace IdentityServer.Clients.ConsoleUser
                 Console.ReadLine();
                 return;
             }
-            string userName = "italobrian@gmail.com";
-            string userPassword = "_Brian1989";
-            Console.WriteLine($"User: {userName}");
+            Console.WriteLine("Enter user data...");
+            Console.WriteLine("\nUser name: ");
+            string userName = Console.ReadLine();
+            Console.WriteLine("\nPassword: ");
+            string userPassword = Console.ReadLine();
+
+            Console.WriteLine($"\n\nRequest user ({userName}) token...\n");
             var token = client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
