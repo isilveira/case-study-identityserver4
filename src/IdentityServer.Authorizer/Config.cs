@@ -43,8 +43,7 @@ namespace IdentityServer.Authorizer
                     ClientId = "client.console_user",
                     ClientName = "User credentials client",
 
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPass
-                    word,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets = { new Secret("4264F8BA-51D0-D271-E49E-E4C2E1B31744".Sha256()) },
 
                     AllowedScopes = { "api1" }

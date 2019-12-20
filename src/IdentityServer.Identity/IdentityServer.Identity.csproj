@@ -16,7 +16,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj" />
+    <ProjectReference Include="..\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj" />
   </ItemGroup>
 
 </Project>

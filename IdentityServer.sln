@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Authorizer",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Identity", "src\IdentityServer.Identity\IdentityServer.Identity.csproj", "{25E489FA-4514-453C-AE2C-D07F69FABDDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndentityServer.Authorizer.Core", "IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj", "{52BF06DC-CA5E-4285-AB47-0650B2124530}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndentityServer.Authorizer.Core", "src\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj", "{52BF06DC-CA5E-4285-AB47-0650B2124530}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Clients.ConsoleUser", "src\IdentityServer.Clients.ConsoleUser\IdentityServer.Clients.ConsoleUser.csproj", "{53011B0A-67F2-4575-944A-D931A00BFBB5}"
 EndProject
