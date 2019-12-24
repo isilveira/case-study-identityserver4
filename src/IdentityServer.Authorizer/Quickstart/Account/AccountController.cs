@@ -130,9 +130,19 @@ namespace IdentityServer4.Quickstart.UI
                             ExpiresUtc = DateTimeOffset.UtcNow.Add(AccountOptions.RememberMeLoginDuration)
                         };
                     };
-
+                    
                     // issue authentication cookie with subject ID and username
-                    await HttpContext.SignInAsync(user.Id, user.UserName, props);
+                    var withClaims = false;
+                    if (withClaims)
+                    {
+                        var claims = await _userManager.GetClaimsAsync(user);
+
+                        await HttpContext.SignInAsync(user.Id, user.UserName, props, claims.ToArray());
+                    }
+                    else
+                    {
+                        await HttpContext.SignInAsync(user.Id, user.UserName, props);
+                    }
 
                     if (context != null)
                     {

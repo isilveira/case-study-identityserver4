@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Authorizer",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Identity", "src\IdentityServer.Identity\IdentityServer.Identity.csproj", "{25E489FA-4514-453C-AE2C-D07F69FABDDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndentityServer.Authorizer.Core", "src\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj", "{52BF06DC-CA5E-4285-AB47-0650B2124530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndentityServer.Authorizer.Core", "src\IndentityServer.Authorizer.Core\IndentityServer.Authorizer.Core.csproj", "{52BF06DC-CA5E-4285-AB47-0650B2124530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Clients.ConsoleUser", "src\IdentityServer.Clients.ConsoleUser\IdentityServer.Clients.ConsoleUser.csproj", "{53011B0A-67F2-4575-944A-D931A00BFBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Clients.ConsoleUser", "src\IdentityServer.Clients.ConsoleUser\IdentityServer.Clients.ConsoleUser.csproj", "{53011B0A-67F2-4575-944A-D931A00BFBB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Clients.MVC", "src\IdentityServer.Clients.MVC\IdentityServer.Clients.MVC.csproj", "{E09DBDA9-1932-46A3-A65E-F898368CF340}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53011B0A-67F2-4575-944A-D931A00BFBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09DBDA9-1932-46A3-A65E-F898368CF340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09DBDA9-1932-46A3-A65E-F898368CF340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09DBDA9-1932-46A3-A65E-F898368CF340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09DBDA9-1932-46A3-A65E-F898368CF340}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{25E489FA-4514-453C-AE2C-D07F69FABDDB} = {AC8E4A10-D902-4188-AA38-214A79D12C99}
 		{52BF06DC-CA5E-4285-AB47-0650B2124530} = {AC8E4A10-D902-4188-AA38-214A79D12C99}
 		{53011B0A-67F2-4575-944A-D931A00BFBB5} = {AEAD57B8-79F1-4E2B-9226-2A9763ABC7F6}
+		{E09DBDA9-1932-46A3-A65E-F898368CF340} = {AEAD57B8-79F1-4E2B-9226-2A9763ABC7F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66B8A50E-87A6-4602-B3E8-962840D377B7}
