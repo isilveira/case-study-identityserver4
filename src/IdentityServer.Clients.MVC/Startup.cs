@@ -49,17 +49,17 @@ namespace IdentityServer.Clients.MVC
 
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
+                    options.Scope.Add("roles");
 
                     options.GetClaimsFromUserInfoEndpoint = true;
 
                     options.SaveTokens = true;
 
-                    //options.TokenValidationParameters = new TokenValidationParameters
-                    //{
-                    //    NameClaimType = JwtClaimTypes.Name,
-                        
-                    //    //NameClaimType = ClaimTypes.Name,
-                    //};
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = JwtClaimTypes.Name,
+                        RoleClaimType = ClaimTypes.Role
+                    };
                 });
         }
 

@@ -4,6 +4,7 @@
 
 using IdentityServer4.Models;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace IdentityServer.Authorizer
 {
@@ -14,13 +15,25 @@ namespace IdentityServer.Authorizer
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource
+                {
+                    Name = "roles",
+                    Description = "Default roles",
+                    UserClaims =
+                    {
+                        ClaimTypes.Role
+                    }
+                }
             };
 
 
         public static IEnumerable<ApiResource> Apis =>
             new ApiResource[]
             {
-                new ApiResource("api1", "My API #1")
+                new ApiResource {
+                    Name = "api1",
+                    DisplayName = "My API #1"
+                }
             };
 
 
@@ -36,7 +49,9 @@ namespace IdentityServer.Authorizer
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
 
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = {
+                        "api1", "roles"
+                    }
                 },
                 new Client
                 {
@@ -58,12 +73,12 @@ namespace IdentityServer.Authorizer
                     RequirePkce = true,
                     ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
 
-                    RedirectUris = { "http://localhost:7100/signin-oidc" },
-                    FrontChannelLogoutUri = "http://localhost:7100/signout-oidc",
-                    PostLogoutRedirectUris = { "http://localhost:7100/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:8100/signin-oidc" },
+                    FrontChannelLogoutUri = "http://localhost:8100/signout-oidc",
+                    PostLogoutRedirectUris = { "http://localhost:8100/signout-callback-oidc" },
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { "openid", "profile", "api1", "roles" }
                 },
 
                 // SPA client using code flow + pkce
@@ -79,14 +94,14 @@ namespace IdentityServer.Authorizer
 
                     RedirectUris =
                     {
-                        "http://localhost:5002/index.html",
-                        "http://localhost:5002/callback.html",
-                        "http://localhost:5002/silent.html",
-                        "http://localhost:5002/popup.html",
+                        "http://localhost:8200/index.html",
+                        "http://localhost:8200/callback.html",
+                        "http://localhost:8200/silent.html",
+                        "http://localhost:8200/popup.html",
                     },
 
-                    PostLogoutRedirectUris = { "http://localhost:5002/index.html" },
-                    AllowedCorsOrigins = { "http://localhost:5002" },
+                    PostLogoutRedirectUris = { "http://localhost:8200/index.html" },
+                    AllowedCorsOrigins = { "http://localhost:8200" },
 
                     AllowedScopes = { "openid", "profile", "api1" }
                 }

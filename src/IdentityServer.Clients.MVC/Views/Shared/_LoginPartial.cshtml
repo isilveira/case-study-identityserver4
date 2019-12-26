@@ -1,8 +1,5 @@
-﻿@{ 
-    var isAuthenticated = User != null;
-}
-<ul class="navbar-nav">
-    @if (isAuthenticated)
+﻿<ul class="navbar-nav">
+    @if (User.Identity.IsAuthenticated)
     {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
